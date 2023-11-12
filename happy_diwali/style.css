@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: purple;
+}
+
+.main-container {
+  display: grid;
+  place-items: center;
+  height: 70vh;
+}
+
+.deep {
+  background-color: brown;
+  border: 5px solid black;
+  height: 150px;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 0 0 150px 150px;
+}
+
+.flame {
+  width: 300px;
+  height: 60px;
+  background-color: orange;
+  position: relative;
+  margin-bottom: -490px;
+  z-index: 1;
+  border-radius: 50%;
+  border: 2px solid black;
+  transform: rotate(180deg);
+}
+
+.flame .flame-in {
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 170px 0px;
+    margin-left: 70px;
+    margin-top: 180px;
+    transform: rotate(180deg);
+    animation: inner 5s infinite;
+  }
+
+  .flame .flame-out {
+    height: 170px;
+    width: 170px;
+    border-radius: 170px 0px;
+    background-color: rgb(255, 255, 146);
+    transform: rotate(-45deg);
+    margin-left: 60px;
+    margin-top: -145px;
+    opacity: 0.8;
+    animation: flicker 5s infinite;
+  }
+
+@keyframes flicker {
+  0%,
+  100% {
+    width: 170px;
+    opacity: 1;
+    background-color: rgb(250, 250, 3);
+  }
+  25% {
+    width: 168px;
+    opacity: 0.8;
+    background-color: rgb(255, 170, 73);
+  }
+  50% {
+    width: 166px;
+    opacity: 1.1;
+  }
+  75% {
+    width: 164px;
+    opacity: 0.9;
+    background-color: rgb(249, 100, 25);
+  }
+}
+
+
+@keyframes inner{
+    0%,
+  100% {
+    width: 98px;
+    background-color: rgb(25, 104, 250);
+  }
+  25% {
+    width: 96px;
+    background-color: rgb(200, 239, 4);
+  }
+  50% {
+    width: 94px;
+    background-color: rgb(255, 60, 0);
+  }
+  75% {
+    width: 92px;
+    background-color: rgb(255, 85, 0);
+  }
+}
+
+
+.wish{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.wish .one{
+    color: rgb(247, 9, 9);
+    border: 2px solid black;
+    padding: 10px;
+    font-weight: 600;
+    background-color: rgb(0, 7, 13);
+}
+.two{
+    color: rgb(252, 4, 4);
+    border: 2px solid black;
+    padding: 10px;
+    font-weight: 600;
+    background-color: rgb(0, 7, 13);
+}
+
+.crack{
+    position: absolute;
+    width: 100%;
+    height: 25vh;
+    background-color: aqua;
+}
